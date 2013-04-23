@@ -1,0 +1,23 @@
+<h1>Listing task1s</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @task1s.each do |task1| %>
+  <tr>
+    <td><%= task1.name %></td>
+    <td><%= link_to 'Show', task1 %></td>
+    <td><%= link_to 'Edit', edit_task1_path(task1) %></td>
+    <td><%= link_to 'Destroy', task1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Task1', new_task1_path %>
